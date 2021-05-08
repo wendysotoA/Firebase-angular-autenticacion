@@ -11,12 +11,26 @@
   <p></p>
 
   <div class="row">
-    <div class="col-4 col-sm-2">
+    <div class="col- 4 col-sm-2">
 
       <app-sidebar></app-sidebar>
     </div>
     <div class="col-8 col-sm-6">
-      <img src="/src/assets/imagenes/logopresto.png" alt="">
+      <fieldset class="form-group">
+        <legend class="mt-4">Ranges</legend>
+          <label for="customRange1" class="form-label">Example range</label>
+          <input type="range" class="form-range" id="customRange1">
+          <label for="disabledRange" class="form-label">Disabled range</label>
+          <input type="range" class="form-range" id="disabledRange" disabled="">
+          <label for="customRange3" class="form-label">Example range</label>
+          <input type="range" class="form-range" min="0" max="5" step="0.5" id="customRange3">
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <p></p>
+
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;"></div>
+      </div>
 
 
     </div>
