@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card text-white bg-success mb-3 mt-2" style="max-width: 50rem;">
+    <div class="card-header">
+      Employee Details
+    </div>
+    <div class="card-body">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          nombre: <h5>{{proyectos.nombre}}</h5>
+        </li>
+        <li class="list-group-item">
+          Descripcion: <h5>{{proyectos.descripcion}}</h5>
+        </li>
+        <li class="list-group-item">
+          Lugar: <h5>{{proyectos.lugar}}</h5>
+        </li>
+        <li class="list-group-item">
+            Requisitos: <h5>{{proyectos.requisitos}}</h5>
+        </li>
+      </ul>
+    </div>
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-outline-info m-1 btn-sm" (click)="onEdit()">Edit</button>
+      <button type="button" class="btn btn-outline-danger m-1 btn-sm" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+
+<button type="button" class="btn btn-secondary mt-2" (click)="backList()">Go Back to list</button>
+
+
+</div>

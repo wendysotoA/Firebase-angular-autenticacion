@@ -13,22 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor( private serviceauth:FirebaseauthService) { }
 
   ngOnInit(): void {
-    try{
-      this.serviceauth.getCurrentUser().then(r=>{
-        this.usuario=r?.email;
 
-       console.log(r?.email);
 
-     })
-    }catch(error){
-      console.log(error);
-    }
-  }
-
-  //CERRAR SESION
-  Onlogout(){
-    this.serviceauth.logout();
-  }
-
+}
 
 }

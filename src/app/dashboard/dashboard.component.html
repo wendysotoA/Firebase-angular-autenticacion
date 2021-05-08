@@ -1,14 +1,25 @@
-
-<div class="container">
   <div class="row">
     <div class="col-md-12">
-      <router-outlet></router-outlet>
+      <app-header></app-header>
+      <div class="container">
+
+      </div>
+
+
     </div>
   </div>
-</div>
+  <p></p>
+
+  <div class="row">
+    <div class="col-4 col-sm-2">
+
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-8 col-sm-6">
+
+    </div>
+  </div>
 
 
-<p>{{usuario}}</p>
 
-<button class="btn btn-primary"  (click)="Onlogout()" type="submit" routerLink="/login">Logout</button>
 

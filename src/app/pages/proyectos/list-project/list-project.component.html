@@ -1,0 +1,31 @@
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">NOMBRE</th>
+        <th scope="col">DESCRIPCION</th>
+        <th scope="col">LUGAR</th>
+        <th scope="col">REQUSITOS</th>
+        <th scope="col" class="d-none d-sm-block" >ACCIONES</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="table-info" *ngFor="let  item of fakeData">
+        <th scope="row">{{item.nombre}}</th>
+        <td>{{item.descrip}}</td>
+        <td>{{item.lugar}}</td>
+        <td>{{item.requisitos}}</td>
+        <td class="bnt-group d-none d-sm-block" role="group">
+          <button type="button" class="btn btn-outline-info m-1" (click)="onDetails(item)">Ver</button>
+          <button type="button" class="btn btn-outline-success m-1"(click)="onEdit(item)">Editar</button>
+          <button type="button" class="btn btn-outline-danger m-1"(click)="onDelete(item)">Eliminar</button>
+
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+

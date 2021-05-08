@@ -19,6 +19,10 @@ const routes: Routes = [
   {path: 'dashboard',    component: DashboardComponent, canActivate: [CheckloginGuard]},
 
   {path: 'forgot',    component: ForgotPasswordComponent,canActivate: [LogoutGuard]},
+  { path: 'list', loadChildren: () => import('./pages/proyectos/list-project/list-project.module').then(m => m.ListProjectModule) },
+  { path: 'new', loadChildren: () => import('./pages/proyectos/new-project/new-project.module').then(m => m.NewProjectModule) },
+  { path: 'details', loadChildren: () => import('./pages/proyectos/details/details.module').then(m => m.DetailsModule) },
+  { path: 'edit', loadChildren: () => import('./pages/proyectos/edit/edit.module').then(m => m.EditModule) },
 ];
 
 @NgModule({
