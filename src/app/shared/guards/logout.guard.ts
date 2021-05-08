@@ -11,7 +11,10 @@ import { isNullOrUndefined } from 'util';
 export class LogoutGuard implements CanActivate {
 
   constructor(private fAuth:AngularFireAuth, public router:Router){  }
-  canActivate(
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    throw new Error('Method not implemented.');
+  }
+  /*canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
       return this.fAuth.authState.pipe(map(auth=> {
@@ -23,6 +26,6 @@ export class LogoutGuard implements CanActivate {
         }
 
       }))
-  }
+  }*/
 
 }

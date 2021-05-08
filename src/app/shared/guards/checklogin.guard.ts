@@ -16,7 +16,10 @@ export class CheckloginGuard implements CanActivate {
   constructor(private fAuth:AngularFireAuth, public router:Router){
 
   }
-  canActivate(
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
+    throw new Error('Method not implemented.');
+  }
+  /*canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
 
@@ -34,6 +37,6 @@ export class CheckloginGuard implements CanActivate {
       }))
 
 
-      }
+      }*/
 }
 
