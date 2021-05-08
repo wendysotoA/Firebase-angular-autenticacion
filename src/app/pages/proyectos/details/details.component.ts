@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { ProyectoserviceService } from 'src/app/services/proyectoservice.service';
 import { Projects } from 'src/app/shared/models/proyectos.interface';
 
 @Component({
@@ -17,7 +18,7 @@ export class DetailsComponent implements OnInit {
 
 proyectos:Projects=null;
 
-  constructor(private router:Router) {
+  constructor(private router:Router, private proyService:ProyectoserviceService) {
     const navigation=this.router.getCurrentNavigation();
     this.proyectos=navigation?.extras?.state?.value;
 
@@ -43,8 +44,17 @@ proyectos:Projects=null;
     this.router.navigate(['list'])
   }
 
-  onDelete(){
-    window.alert('Desea Eliminar?');
+   //Eliminar
+   async onDelete():Promise<void>{
+    try {
+  await this.proyService.deleteProject(this.proyectos?.id);
+  alert('Registro Emilinado');
+  this.backList();
+    } catch (error) {
+      console.error(error);
+
+    }
+
   }
 
 

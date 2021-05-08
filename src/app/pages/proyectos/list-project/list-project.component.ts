@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+import { ProyectoserviceService } from 'src/app/services/proyectoservice.service';
 
 @Component({
   selector: 'app-list-project',
@@ -16,7 +17,7 @@ export class ListProjectComponent implements OnInit {
 
   };
 
-  fakeData=[
+  /*fakeData=[
     {
       nombre:'App1',
       descrip:'sdsdsd',
@@ -35,10 +36,12 @@ export class ListProjectComponent implements OnInit {
       lugar:'dsdw',
       requisitos:'sewew'
     }
-  ];
+  ];*/
+  //observable
+proyectos$ = this.proyService.proyectos;
 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private proyService:ProyectoserviceService) { }
 
   ngOnInit(): void {
   }
@@ -53,9 +56,19 @@ export class ListProjectComponent implements OnInit {
     this.navigationExtras.state.value=item;
     this.router.navigate(['edit'],this.navigationExtras);
   }
+
+
   //Eliminar
-  onDelete(item:any):void{
-    alert('Desea Eliminar?');
+  async onDelete(proyId:string):Promise<void>{
+    try {
+  await this.proyService.deleteProject(proyId);
+  alert('Registro Emilinado');
+    } catch (error) {
+      console.error(error);
+
+
+    }
+
   }
 
 }
