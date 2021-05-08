@@ -3,19 +3,40 @@
     <div class="form-group">
       <label class="form-label mt-4">Floating labels</label>
       <div class="form-floating mb-3">
-        <input class="form-control" id="floatingInput" placeholder="name" formControlName="nombre">
+        <input class="form-control" id="floatingInput" placeholder="name" formControlName="nombre" [class]="validacion('nombre')">
+        <div class="invalid-feedback">
+          <span *ngIf="proyectForm.get('nombre').errors?.required">
+            Este campo es requerido
+          </span>
+        </div>
         <label for="floatingInput">Nombre</label>
       </div>
       <div class="form-floating mt-2">
-        <input class="form-control" id="floatingPassword" placeholder="Password" formControlName="descrip">
+        <input class="form-control" id="floatingPassword" placeholder="Descripcion" formControlName="descrip" [class]="validacion('descrip')">
+        <div class="invalid-feedback">
+          <span *ngIf="proyectForm.get('descrip
+          ').errors?.required">
+            Este campo es requerido
+          </span>
+        </div>
         <label for="floatingPassword">descrip</label>
       </div>
       <div class="form-floating mt-2">
-        <input  class="form-control" id="floatingPassword" placeholder="Password" formControlName="lugar">
+        <input  class="form-control" id="floatingPassword" placeholder="lugar" formControlName="lugar" [class]="validacion('lugar')">
+        <div class="invalid-feedback">
+          <span *ngIf="proyectForm.get('lugar').errors?.required">
+            Este campo es requerido
+          </span>
+        </div>
         <label for="floatingPassword">lugar</label>
       </div>
       <div class="form-floating mt-2">
-        <input class="form-control" id="floatingPassword" placeholder="Password" formControlName="requisitos">
+        <input class="form-control" id="floatingPassword" placeholder="Requisitos" formControlName="requisitos" [class]="validacion('requisitos')">
+        <div class="invalid-feedback">
+          <span *ngIf="proyectForm.get('requisitos').errors?.required">
+            Este campo es requerido
+          </span>
+        </div>
         <label for="floatingPassword">Requisitos</label>
       </div>
       <div class="d-grid gap-2">

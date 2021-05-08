@@ -59,5 +59,12 @@ if(this.proyectForm.valid){
 
   }
 
+  //VALIDACIONES
+  validacion(input:string):string{
+    const campovalido=this.proyectForm.get(input);
+    return (!campovalido.valid && campovalido.touched)?
+    'is-invalid' :campovalido.touched? 'is-valid': '';
+  }
+
 
 }
