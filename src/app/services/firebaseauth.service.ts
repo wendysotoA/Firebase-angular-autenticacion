@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { first } from 'rxjs/operators';
+import firebase from 'firebase';
 
-import { Router } from  "@angular/router";
 
 
 
@@ -13,7 +13,7 @@ import { Router } from  "@angular/router";
 export class FirebaseauthService {
   authState: any;
 
-  constructor(private fAuth:AngularFireAuth, private router:Router) { }
+  constructor(private fAuth:AngularFireAuth) { }
 
   //METODO LOGIN
 async login (email:string, password: string){
@@ -30,11 +30,15 @@ async login (email:string, password: string){
 }
 
 
-/*//LOGIN GOOGLE
-async  loginWithGoogle(){
-  await  this.fAuth.signInWithPopup(new auth.GoogleAuthProvider())
-  this.router.navigate(['/dashboard']);
-}*/
+//LOGIN GOOGLE
+async loginGoogle() {
+  try{
+    return this.fAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+  }catch(error)
+  {
+    console.log(error);
+  }
+}
 
 //METODO DE REGISTRO
 async register (email:string, password: string){

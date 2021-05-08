@@ -16,7 +16,7 @@ const routes: Routes = [
 
   {path: '#',    component: LoginComponent},
   {path: 'register',    component: RegisterComponent},
-  {path: 'dashboard',    component: DashboardComponent, canActivate: [CheckloginGuard]},
+  {path: 'dashboard',    component: DashboardComponent, /*canActivate: [CheckloginGuard]*/},
 
   {path: 'forgot',    component: ForgotPasswordComponent,canActivate: [LogoutGuard]},
   { path: 'list', loadChildren: () => import('./pages/proyectos/list-project/list-project.module').then(m => m.ListProjectModule) },

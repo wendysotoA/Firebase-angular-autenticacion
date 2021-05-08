@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { FirebaseauthService } from 'src/app/services/firebaseauth.service';
-import * as firebase from 'firebase/app';
-import { AngularFireAuth } from '@angular/fire/auth';
+
+
 
 @Component({
   selector: 'app-login',
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
 
   })
 
-  constructor(public servicesauth:FirebaseauthService, private router:Router, private fAuth:AngularFireAuth) { }
+  constructor(public servicesauth:FirebaseauthService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -39,11 +39,18 @@ export class LoginComponent implements OnInit {
 
   }
 
-  /*loginWithGoogle(){
-    this.fAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-      .then(() => this.router.navigate(['/dashboard']));
+  async onLoginGoogle(){
+    try{
+      const user = await this.servicesauth.loginGoogle();
+      if(user){
+        this.router.navigate(['/dashboard'])
+      }
+
+    }catch(error){
+      console.log(error);
+    }
+  }
 
 
-  }*/
 
 }
