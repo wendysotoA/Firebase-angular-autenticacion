@@ -21,8 +21,9 @@ const routes: Routes = [
 
 { path:'', component:PagesComponent,
     children:[
-      {path: 'dashboard', component:DashboardComponent},
-      { path: 'list', loadChildren: () => import('./pages/proyectos/list-project/list-project.module').then(m => m.ListProjectModule) },
+
+  {path: 'dashboard', component:DashboardComponent},
+  { path: 'list', loadChildren: () => import('./pages/proyectos/list-project/list-project.module').then(m => m.ListProjectModule) },
   { path: 'new', loadChildren: () => import('./pages/proyectos/new-project/new-project.module').then(m => m.NewProjectModule) },
   { path: 'details', loadChildren: () => import('./pages/proyectos/details/details.module').then(m => m.DetailsModule) },
   { path: 'edit', loadChildren: () => import('./pages/proyectos/edit/edit.module').then(m => m.EditModule) },

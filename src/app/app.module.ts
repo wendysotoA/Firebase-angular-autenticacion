@@ -21,8 +21,6 @@ import { SidebarModule } from './shared/components/sidebar/sidebar.module';
 
 import { ProjectFormModule } from './shared/components/project-form/project-form.module';
 import { PagesComponent } from './pages/pages.component';
-import { AngularFontAwesomeModule } from 'angular-font-awesome';
-
 
 
 
@@ -38,10 +36,12 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     PagesComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+
 
     FormsModule,
     ReactiveFormsModule,
@@ -52,7 +52,8 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     HeaderModule,
     SidebarModule,
     ProjectFormModule,
-    AngularFontAwesomeModule
+
+
 
 
   ],

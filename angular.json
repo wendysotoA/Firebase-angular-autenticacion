@@ -26,6 +26,7 @@
             "styles": [
               "src/styles.scss"
 
+
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -93,6 +94,7 @@
             ],
             "styles": [
               "src/styles.css"
+
             ],
             "scripts": []
           }
