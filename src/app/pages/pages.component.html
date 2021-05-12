@@ -1,0 +1,50 @@
+
+  <app-header></app-header>
+  <div class="row">
+    <div class="col-2">
+      <div class="pull-left">
+        <app-sidebar></app-sidebar>
+      </div>
+    </div>
+    <div class="col-10 mt-4 mb-4 mr-4">
+      <div class="pull-right">
+        <div class="card">
+          <div class="card-body ">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <!-- Site footer -->
+  <footer class="site-footer">
+    <hr>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; {{year}} All Rights Reserved by
+       <a href="#">Presto System</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</footer>

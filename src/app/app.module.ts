@@ -20,6 +20,7 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { SidebarModule } from './shared/components/sidebar/sidebar.module';
 
 import { ProjectFormModule } from './shared/components/project-form/project-form.module';
+import { PagesComponent } from './pages/pages.component';
 
 
 
@@ -34,6 +35,7 @@ import { ProjectFormModule } from './shared/components/project-form/project-form
     ForgotPasswordComponent,
     HeaderComponent,
     SidebarComponent,
+    PagesComponent,
 
 
   ],
