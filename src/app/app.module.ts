@@ -21,7 +21,7 @@ import { SidebarModule } from './shared/components/sidebar/sidebar.module';
 
 import { ProjectFormModule } from './shared/components/project-form/project-form.module';
 import { PagesComponent } from './pages/pages.component';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 
@@ -51,7 +51,8 @@ import { PagesComponent } from './pages/pages.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     HeaderModule,
     SidebarModule,
-    ProjectFormModule
+    ProjectFormModule,
+    AngularFontAwesomeModule
 
 
   ],

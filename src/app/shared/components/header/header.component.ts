@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FirebaseauthService } from 'src/app/services/firebaseauth.service';
 
 @Component({
@@ -7,6 +7,10 @@ import { FirebaseauthService } from 'src/app/services/firebaseauth.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Output()
+  toggleSidebar = new EventEmitter<void>();
+
+  public showSearch = false;
 
   usuario:string;
   constructor(private serviceauth:FirebaseauthService) { }
